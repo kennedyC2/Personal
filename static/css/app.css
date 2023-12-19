@@ -2,9 +2,9 @@ html,
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: auto;
-    background-image: linear-gradient(to right, #eeeeee, #ffffff);
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #d8d3d3, #ffffff);
     position: relative;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 
 .fab {
-    font-size: 25px;
+    font-size: 30px;
     color: #303841;
 }
 
@@ -43,24 +43,19 @@ body {
     width: 100%;
     height: auto;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     transition: 0.2s;
 }
 
 #tp {
     width: 100%;
     height: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 5% 0;
     color: #303841;
 }
 
 .md {
     width: 100%;
-    height: 100%;
+    height: 85%;
     display: flex;
     justify-content: space-between;
 }
@@ -82,7 +77,7 @@ body {
 
 #dn {
     width: 100%;
-    height: 20px;
+    height: 2%;
     /* border: 1px solid blue; */
 }
 
@@ -96,8 +91,8 @@ body {
 
 .mid {
     width: 100%;
-    height: auto;
-    min-height: calc(0.26 * 100vh);
+    height: 50%;
+    /* min-height: calc(0.26 * 100vh); */
     /* border: 1px solid black; */
     font-family: Nunito Regular;
     color: #303841;
@@ -108,8 +103,9 @@ body {
 }
 
 #logo {
-    margin-left: 20px;
-    font-family: Nunito italic;
+    margin-left: 15px;
+    font-family: Nunito bold;
+    font-size: 1.5rem;
 }
 
 #nav {
@@ -124,7 +120,7 @@ body {
     height: auto;
     padding: 5px 0;
     background-color: #f6feffcf;
-    transition: 0.8s;
+    transition: 1s;
 }
 
 .nav_m ul {
@@ -139,7 +135,7 @@ body {
 .nav_m ul li {
     padding: 5px 0;
     margin: 0;
-    width: calc(100vw / 5);
+    width: calc(100% / 5);
     text-align: center;
     float: left;
     cursor: pointer;
@@ -152,7 +148,7 @@ body {
 }
 
 .out {
-    bottom: -100px;
+    bottom: -150px;
 }
 
 #n1 {
@@ -173,7 +169,7 @@ body {
 }
 
 #n1 button {
-    padding: 7px 20px;
+    padding: 10px 20px;
     border: 2px outset #d72323;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -191,7 +187,7 @@ body {
 #profile_pic {
     width: 250px;
     height: 250px;
-    margin: 25px auto;
+    margin: 35px auto;
     border-width: 0 6px 0 0;
     border-style: outset;
     border-color: #3e3636;
@@ -208,6 +204,10 @@ body {
     padding: 5px 0;
     width: 95%;
     /* border: 1px solid red; */
+}
+
+.mid .title {
+    display: none;
 }
 
 .title h2 {
@@ -229,9 +229,10 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     margin: 15px auto;
-    padding: 15px 0;
+    padding: 15px 0 25px;
     width: 95%;
     transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 #tech h3,
@@ -250,12 +251,12 @@ body {
 }
 
 .work button {
-    padding: 5px 40px;
+    padding: 10px 40px;
     border: 1px inset #d72323;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     background-color: #d72323;
-    margin: auto 20px;
+    margin: 15px 20px 0;
     color: #ffffff;
 }
 
@@ -300,8 +301,8 @@ body {
     padding: 0 5px;
     margin: auto;
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 5px;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 20px calc(20% / 3);
     font-family: Nunito Bold;
     color: #3e3636;
 }
@@ -311,15 +312,10 @@ body {
     margin: 0;
 }
 
-#skill ul li:hover .brand {
-    box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.2);
-    border: 1px outset #c0c0c0;
-}
-
 #skill ul li p {
     font-size: 13px;
     text-align: center;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .brand {
@@ -338,26 +334,6 @@ svg {
 .pgt .lt {
     width: 100%;
     height: 100%;
-}
-
-.pgt > div:first-child > div:nth-child(2) {
-    display: flex;
-    height: auto;
-    flex-direction: column;
-}
-
-.pgt .work {
-    padding: 0;
-    border-radius: 0;
-    background-color: #ffffff;
-    box-shadow: 0 6px 6px 2px rgba(0, 0, 0, 0.2);
-    width: 93%;
-    height: 300px;
-}
-
-.pgt .work:hover {
-    box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.4);
-    transform: translate(0, -3px);
 }
 
 .pg_pic {
@@ -399,12 +375,12 @@ svg {
 .cont input,
 .cont textarea {
     margin-top: 5px;
-    width: 80%;
+    width: 88%;
     border: 2px inset rgba(201, 199, 199, 0.304);
     border-radius: 10px;
-    padding: 4px 10px;
+    padding: 8px 10px;
     outline: 0;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 footer {
@@ -428,7 +404,6 @@ footer > p {
     .mid {
         width: 100%;
         /* height: 35vh; */
-        min-height: calc(0.26 * 100vh);
     }
 
     #profile_pic {
@@ -447,13 +422,12 @@ footer > p {
 @media screen and (max-width: 300px) {
     .lt {
         width: 100%;
-        height: 50vh;
+        height: auto;
     }
 
     .mid {
         width: 100%;
-        height: 36vh;
-        min-height: calc(0.26 * 100vh);
+        height: auto;
     }
 
     #profile_pic {
@@ -468,11 +442,6 @@ footer > p {
     #n1 p {
         font-size: 14px;
     }
-
-    .pgt .work {
-        width: 50%;
-        height: 400px;
-    }
 }
 
 @media screen and (min-width: 414px) {
@@ -484,7 +453,6 @@ footer > p {
     .mid {
         width: 100%;
         height: unset;
-        min-height: calc(0.26 * 100vh);
     }
 
     #profile_pic {
@@ -496,13 +464,12 @@ footer > p {
 @media screen and (min-width: 520px) {
     .lt {
         width: 100%;
-        height: 40vh;
+        height: auto;
     }
 
     .mid {
         width: 100%;
-        height: 40vh;
-        min-height: calc(0.26 * 100vh);
+        height: auto;
     }
 
     #profile_pic {
@@ -510,9 +477,10 @@ footer > p {
         height: 250px;
     }
 
+    .wk .work,
     .pgt .work {
         width: 95%;
-        height: 400px;
+        height: auto;
     }
 }
 
@@ -526,7 +494,6 @@ footer > p {
     .mid {
         width: 100%;
         height: 30vh;
-        min-height: calc(0.26 * 100vh);
     }
 
     #profile_pic {
@@ -543,8 +510,7 @@ footer > p {
     }
 
     .pgt .work {
-        width: 50%;
-        height: 300px;
+        height: auto;
     }
 }
 
@@ -558,7 +524,6 @@ footer > p {
     .mid {
         width: 100%;
         height: auto;
-        min-height: calc(0.26 * 100vh);
     }
 
     #univ,
@@ -566,7 +531,7 @@ footer > p {
     #skill,
     .work {
         margin: 15px;
-        width: 60%;
+        /* width: 60%; */
     }
 
     .pgt > div:first-child > div:nth-child(2) {
@@ -576,23 +541,16 @@ footer > p {
 
 @media screen and (min-width: 800px) {
     .lt {
-        width: 80%;
-        height: 40vh;
+        width: 100%;
         margin: auto;
     }
 
     .mid {
         width: 100%;
-        height: 33vh;
-        min-height: calc(0.26 * 100vh);
     }
 
     #profile_pic {
         width: 350px;
-        height: 350px;
-    }
-
-    .pgt .work {
         height: 350px;
     }
 }
@@ -608,20 +566,32 @@ footer > p {
     html,
     body {
         height: 100vh;
+        background-image: linear-gradient(to right, #d8d3d3, #ffffff);
     }
 
     #ext {
         max-width: 950px;
         max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .mid .title {
+        display: block;
+        visibility: hidden;
     }
 
     #tp {
-        padding-top: 15px;
+        padding-top: 2%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     #nav {
         display: block;
-        padding-top: 20px;
+        margin: auto 0;
         color: #303841;
     }
 
@@ -643,29 +613,41 @@ footer > p {
         padding: 2px;
         float: left;
         cursor: pointer;
+        font-size: 1.05rem;
     }
 
     #nav ul li:hover {
         border-bottom: 3px solid #d72323;
     }
 
+    #skill ul {
+        grid-template-columns: 16% 16% 16% 16% 16%;
+        gap: 20px calc(20% / 4);
+    }
+
     .md {
         width: 100%;
         height: 75%;
-        margin-top: 30px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
+    #wk,
+    #pgt,
+    #cont,
+    #abt {
+        height: 85%;
+    }
+
     .lt {
-        width: 50%;
+        width: 52%;
         height: 100%;
         margin: unset;
     }
 
     #n1 {
-        width: 80%;
+        width: 70%;
         margin: 13% 0 0 20px;
         text-align: unset;
     }
@@ -681,31 +663,35 @@ footer > p {
     .mid {
         width: 40%;
         height: 100%;
+        /* min-height: calc(0.26 * 100vh); */
+    }
+
+    .wk .lt,
+    .pgt .lt,
+    .pgt .mid,
+    .wk .mid {
+        width: calc(100% / 3);
     }
 
     #profile_pic {
         width: 300px;
         height: 300px;
+        margin: 70px auto 20px;
     }
 
     .rt {
         width: 4%;
-        /* height: 85%; */
-        padding: 2% 5px 0 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        /* border: 1px solid black; */
     }
 
     .rt div {
-        margin: auto;
+        margin: 35px auto;
     }
 
     footer {
         width: 50%;
         text-align: left;
-        padding-left: 20px;
     }
 
     footer p {
@@ -725,11 +711,12 @@ footer > p {
     }
 
     #skill {
-        width: 75%;
+        width: 85%;
     }
 
-    .work {
-        width: 80%;
+    .wk .work,
+    .pgt .work {
+        width: 90%;
     }
 
     .wk .mid > div:first-child {
@@ -742,17 +729,20 @@ footer > p {
         width: 100%;
     }
 
-    .pgt .lt {
-        width: 93%;
+    .wk .rt,
+    .cont .rt,
+    .pgt .rt,
+    .abt .rt,
+    .hm .rt {
+        margin-top: -10px;
+    }
+
+    .cont .lt {
+        width: 100%;
     }
 
     .pgt > div:first-child > div:nth-child(2) {
         flex-direction: row;
-    }
-
-    .pgt .work {
-        width: 50%;
-        height: 300px;
     }
 
     .pg_pic {
@@ -762,12 +752,41 @@ footer > p {
     #dn {
         height: 5%;
     }
+
+    .pgt .work {
+        min-height: 250px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
     #ext {
         max-width: 1200px;
-        max-height: 100%;
+        /* padding-top: 15px; */
+        height: 100%;
+    }
+
+    .lt .title,
+    .mid .title {
+        margin: 0;
+        width: 100%;
+    }
+
+    #profile_pic {
+        margin: 10px auto 20px;
+    }
+
+    #univ,
+    #tech,
+    #skill,
+    .work {
+        margin: 15px 0;
+        width: 95%;
+    }
+
+    #logo {
+        font-size: 2.3rem;
+        font-weight: 600;
+        margin: auto 0;
     }
 
     #profile_pic {
@@ -776,17 +795,22 @@ footer > p {
     }
 
     #n1 {
-        margin: 18% 0 0 20px;
+        margin: 0;
         text-align: unset;
+        font-family: Nunito italic;
+    }
+
+    .hm .rt {
+        margin-top: -50px;
     }
 
     #n1 p {
-        font-size: 21px;
+        font-size: 20px;
     }
 
+    .wk .work,
     .pgt .work {
-        width: 50%;
-        height: 400px;
+        width: 95%;
     }
 }
 
