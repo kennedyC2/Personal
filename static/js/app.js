@@ -1,4 +1,4 @@
-const navItems_1 = document.querySelectorAll("li.bt");
+const navItems_1 = document.querySelectorAll("div.bt");
 const navItems_2 = document.querySelectorAll("li.mt");
 const nav_m = document.getElementById("nav_m");
 const pgs = [document.getElementById("hm"), document.getElementById("abt"), document.getElementById("wk"), document.getElementById("pgt"), document.getElementById("cont")];
@@ -7,14 +7,16 @@ const logo = document.getElementById("tp")
 // Swap Pages
 const Swap_d = () => {
     navItems_1.forEach((nav) => {
-        nav.addEventListener("click", () => {
+        nav.addEventListener("click", (e) => {
             for (var i = 0; i < pgs.length; i++) {
                 if (!pgs[i].classList.contains("closed")) {
                     pgs[i].classList.add("closed");
                 }
             }
 
-            switch (nav.innerHTML) {
+            console.log(nav)
+
+            switch (nav.dataset.bsTitle) {
                 case "Home":
                     pgs[0].classList.remove("closed");
                     break;
@@ -130,6 +132,39 @@ const space = () => {
     });
 };
 
-space();
-Swap_d();
-Swap_m();
+
+const tooltipList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+tooltipList.forEach(each => {
+    const tooltip = new bootstrap.Tooltip(each, {
+        offset: [0, 15],
+    })
+})
+
+// Calculate width and Set
+// const setWidth = (target) => {
+//     // Get word
+//     const word = document.querySelector("div." + target + " > h2").textContent;
+//     console.log(word, word.length)
+
+//     // Create a canvas element
+//     const canvas = document.createElement('canvas');
+//     const context = canvas.getContext('2d');
+
+//     // Set font properties (match your styles)
+//     context.font = getComputedStyle(document.body).font;
+
+//     // Measure the width of the text
+//     const width = context.measureText(word).width;
+
+//     console.log(width.toFixed(2) * 2)
+//     document.querySelector("div." + target + " > h2").setAttribute("style", `width: ${width.toFixed(2) * 2 + 500 + 200}px`)
+// }
+
+window.onload = () => {
+    space();
+    Swap_d();
+    Swap_m();
+    setWidth("skls")
+    setWidth("edu_work")
+}
+//*[@id="abt"]/div[1]/div[2]/h2/text()
