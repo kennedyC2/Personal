@@ -209,6 +209,10 @@ button {
     font-family: Nunito Bold;
 }
 
+.pgt .lt .card-body a {
+    color: #303841;
+}
+
 .skls h2 {
     text-align: center;
     margin: 0 auto 50px;
@@ -216,12 +220,17 @@ button {
 
 .edu_work h2 {
     text-align: center;
-    /* width: calc(100% - (500px + 150px) + 200px); */
     margin: 50px auto;
 }
 
 button:hover {
     background-color: #000;
+    color: #ffffff;
+}
+
+.pgt .lt .card-body a:hover {
+    color: #000;
+    text-decoration: none;
 }
 
 #profile_pic {
@@ -345,7 +354,7 @@ button:hover {
     height: 100px;
     margin: 0;
     padding: 20px 5px;
-    border: 1px solid #303841;
+    /* border: 1px solid #303841; */
     border-radius: 20px;
 }
 
@@ -353,7 +362,6 @@ button:hover {
     font-size: 15px;
     text-align: center;
     margin: 10px 0;
-    height: 25%;
 }
 
 .brand {
@@ -571,9 +579,9 @@ footer > p {
         margin: 15px;
     } */
 
-    .pgt > div:first-child > div:nth-child(2) {
+    /* .pgt > div:first-child > div:nth-child(2) {
         flex-direction: row;
-    }
+    } */
 }
 
 @media screen and (min-width: 800px) {
@@ -606,13 +614,13 @@ footer > p {
         /* background-image: linear-gradient(to right, #d8d3d3, #ffffff); */
     }
 
-    /* #ext {
-        max-width: 950px;
-        max-height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    } */
+    .hm {
+        align-items: center;
+    }
+
+    .hm > .lt {
+        max-height: max-content;
+    }
 
     .mid .title {
         display: block;
@@ -636,7 +644,7 @@ footer > p {
     .divider {
         width: 25%;
         height: 1px;
-        margin: 50px auto;
+        margin: 55px auto;
         background-color: #303841;
     }
 
@@ -682,21 +690,22 @@ footer > p {
     .skls .icon_cont {
         grid-template-columns: 10% 10% 10% 10% 10%;
         gap: 40px calc(50% / 4);
+        grid-template-rows: max-content;
     }
 
     .md {
         width: 100%;
-        /* min-height: 60%; */
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
+    #hm,
     #wk,
     #pgt,
     #cont,
     #abt {
-        height: 85%;
+        height: 80%;
     }
 
     .lt {
@@ -743,7 +752,7 @@ footer > p {
 
     .rt {
         width: 4%;
-        height: inherit;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -822,14 +831,81 @@ footer > p {
         padding: 15px 25px;
     }
 
-    /* #univ,
-    #tech,
-    .skls,
-    .work {
-        margin: 15px 20px;
-        padding: 15px 0;
-        width: 70%;
-    } */
+    .edu_work > div,
+    .edu_work > div ul.w_exp > li,
+    .edu_work > div ul.edu > li {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        /* border: 1px solid; */
+    }
+
+    .edu_work > div ul.w_exp > li,
+    .edu_work > div ul.edu > li {
+        margin-bottom: 15px;
+    }
+
+    .edu_work > div ul.w_exp,
+    .edu_work > div ul.edu {
+        width: 43%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .edu_work > div ul.w_exp li > div:first-child,
+    .edu_work > div ul.edu li > div:first-child {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-top: 10px;
+        position: relative;
+        border: 1px solid #303841;
+        border-radius: 50%;
+    }
+
+    .edu_work > div ul.w_exp li .fas,
+    .edu_work > div ul.edu li .fas {
+        font-size: 20px;
+    }
+
+    .edu_work > div ul.w_exp li > div:first-child::after,
+    .edu_work > div ul.edu li > div:first-child::after {
+        content: "";
+        background-color: #303841;
+        height: 1px;
+        width: 60px;
+        position: absolute;
+        bottom: -40px;
+        transform: rotate(90deg);
+    }
+
+    .edu_work > div ul.w_exp > li > div:last-child,
+    .edu_work > div ul.edu > li > div:last-child {
+        width: 85%;
+        padding: 10px 0;
+        /* border: 1px solid; */
+    }
+
+    .edu_work > div ul.w_exp > li > div:last-child p,
+    .edu_work > div ul.edu > li > div:last-child p {
+        width: 25%;
+        text-align: center;
+        background-color: #303841;
+        color: #ffffff;
+        border-radius: 20px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .edu_work > div ul.w_exp > li div:last-child ul li,
+    .edu_work > div ul.edu > li div:last-child ul li {
+        font-size: 13px;
+        text-align: justify;
+    }
 
     .wk .work,
     .pgt .work {
@@ -846,7 +922,8 @@ footer > p {
         width: 100%;
     }
 
-    .abt .lt {
+    .abt .lt,
+    .pgt .lt {
         width: 90%;
         overflow-y: scroll;
         /* border: 1px solid; */
@@ -856,9 +933,9 @@ footer > p {
         width: 100%;
     }
 
-    .pgt > div:first-child > div:nth-child(2) {
+    /* .pgt > div:first-child > div:nth-child(2) {
         flex-direction: row;
-    }
+    } */
 
     .pg_pic {
         height: 65%;
@@ -871,15 +948,24 @@ footer > p {
     .pgt .work {
         min-height: 250px;
     }
+
+    .pgt .lt {
+        display: grid;
+        grid-template-columns: 24% 24% 24% 24%;
+        gap: 20px calc(4% / 3);
+        grid-template-rows: max-content;
+    }
+
+    .pgt .lt .card {
+        max-height: max-content;
+    }
+
+    .pgt .lt .card-text {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    /* #ext {
-        max-width: 1200px;
-        padding-top: 15px;
-        height: 100%;
-    } */
-
     .lt .title,
     .mid .title {
         margin: 0;
@@ -889,14 +975,6 @@ footer > p {
     #profile_pic {
         margin: 15px auto 30px;
     }
-
-    /* #univ,
-    #tech,
-    .skls,
-    .work {
-        margin: 15px 0;
-        width: 95%;
-    } */
 
     #logo {
         font-size: 2.3rem;

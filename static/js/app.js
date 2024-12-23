@@ -140,31 +140,8 @@ tooltipList.forEach(each => {
     })
 })
 
-// Calculate width and Set
-// const setWidth = (target) => {
-//     // Get word
-//     const word = document.querySelector("div." + target + " > h2").textContent;
-//     console.log(word, word.length)
-
-//     // Create a canvas element
-//     const canvas = document.createElement('canvas');
-//     const context = canvas.getContext('2d');
-
-//     // Set font properties (match your styles)
-//     context.font = getComputedStyle(document.body).font;
-
-//     // Measure the width of the text
-//     const width = context.measureText(word).width;
-
-//     console.log(width.toFixed(2) * 2)
-//     document.querySelector("div." + target + " > h2").setAttribute("style", `width: ${width.toFixed(2) * 2 + 500 + 200}px`)
-// }
-
 window.onload = () => {
     space();
     Swap_d();
     Swap_m();
-    setWidth("skls")
-    setWidth("edu_work")
 }
-//*[@id="abt"]/div[1]/div[2]/h2/text()
