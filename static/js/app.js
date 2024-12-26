@@ -1,7 +1,7 @@
 const navItems_1 = document.querySelectorAll("div.bt");
 const navItems_2 = document.querySelectorAll("li.mt");
 const nav_m = document.getElementById("nav_m");
-const pgs = [document.getElementById("hm"), document.getElementById("abt"), document.getElementById("wk"), document.getElementById("pgt"), document.getElementById("cont")];
+const pgs = [document.getElementById("hm"), document.getElementById("abt"), document.getElementById("pgt"), document.getElementById("cont"), document.getElementById("wk")];
 const logo = document.getElementById("tp")
 
 // Swap Pages
@@ -30,11 +30,11 @@ const Swap_d = () => {
                     break;
 
                 case "Projects":
-                    pgs[3].classList.remove("closed");
+                    pgs[2].classList.remove("closed");
                     break;
 
                 case "Contact":
-                    pgs[4].classList.remove("closed");
+                    pgs[3].classList.remove("closed");
                     break;
 
                 default:
@@ -55,54 +55,36 @@ const Swap_m = () => {
 
             switch (nav.classList[1]) {
                 case "h":
-                    logo.classList.remove("closed")
                     pgs[0].classList.remove("closed");
                     nav_m.classList.remove("out");
-                    pgs[0].style.height = "85%"
-                    setTimeout(() => {
-                        nav_m.classList.add("out");
-                    }, 1000);
                     break;
 
-                case "i":
-                    logo.classList.add("closed")
+                case "a":
                     pgs[1].classList.remove("closed");
                     pgs[1].style.height = "auto"
-                    setTimeout(() => {
-                        nav_m.classList.add("out");
-                    }, 1000);
-                    break;
-
-                case "w":
-                    logo.classList.add("closed")
-                    pgs[2].classList.remove("closed");
-                    pgs[2].style.height = "auto"
-                    setTimeout(() => {
-                        nav_m.classList.add("out");
-                    }, 1000);
                     break;
 
                 case "p":
-                    logo.classList.add("closed")
-                    pgs[3].classList.remove("closed");
-                    pgs[3].style.height = "auto"
-                    setTimeout(() => {
-                        nav_m.classList.add("out");
-                    }, 1000);
+                    pgs[2].classList.remove("closed");
+                    pgs[2].style.height = "auto"
                     break;
 
                 case "c":
-                    logo.classList.add("closed")
+                    pgs[3].classList.remove("closed");
+                    pgs[3].style.height = "auto"
+                    break;
+
+                case "b":
                     pgs[4].classList.remove("closed");
                     pgs[4].style.height = "auto"
-                    setTimeout(() => {
-                        nav_m.classList.add("out");
-                    }, 1000);
                     break;
 
                 default:
                     break;
             }
+            setTimeout(() => {
+                nav_m.classList.add("out");
+            }, 1000);
         });
     });
 };

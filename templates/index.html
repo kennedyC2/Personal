@@ -19,12 +19,13 @@
         <div id="ext" class="container">
             <!-- Homepage -->
             <!-- ============================================================================= -->
-            <div class="md hm closed" id="hm">
+            <div class="md hm" id="hm">
                 <div class="lt text-center">
                     <div id="profile_pic"></div>
                     <h2 class="text-center fw-bold mb-2">Kennedy C. Ogbonna</h2>
                     <h4 class="text-center fw-semibold mb-3">(He/Him)</h4>
-                    <p class="text-center fs-5 mb-4">Full-Stack Developer</p>
+                    <p class="text-center fs-5 mb-2 mb-md-4">Full-Stack Developer</p>
+                    <p class="text-center fs-6 mb-4 mx-auto d-lg-none" style="width: 80%">Let’s create something exceptional together—get in touch to discuss your next big idea!</p>
                     <div class="msgs">
                         <div>
                             <i class="fab fa-github-square"></i>
@@ -43,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mid">
+                <div class="mid d-none d-md-block">
                     <div id="n1">
                         <h1 class="fw-bold mb-2 text-capitalize">Hello .....</h1>
                         <p>My journey as a Full-Stack Developer has been an exciting one, each project is like a new adventure where I get to dive deep into technologies like JavaScript and React for the frontend while harnessing the power of Node.js on the backend. Building engaging solutions is not just my job, it’s my passion.</p>
@@ -411,7 +412,7 @@
             </div>
 
             <!-- Project Page -->
-            <div class="md pgt" id="pgt">
+            <div class="md pgt closed" id="pgt">
                 <div class="lt">
                     <div class="card">
                         <img src="./../static/images/portfolio.jpeg" class="card-img-top" alt="..." />
@@ -524,12 +525,28 @@
             <!-- Contact Page -->
             <div class="md cont closed" id="cont">
                 <div class="lt">
-                    <div class="title">
-                        <h2 style="font-family: Nunito Bold">Contact</h2>
+                    <h1 class="fw-bold text-uppercase">Get In Touch ...</h1>
+                    <p class="mb-4">Feel free to get in touch! I am always eager to discuss new projects, share creative ideas, and explore opportunities to contribute meaningfully to your vision.</p>
+                    <div>
+                        <i class="fas fa-phone-square"></i>
+                        <p>+44 783 163 0144</p>
                     </div>
-
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <p>Kennedychidi55@gmail.com</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker"></i>
+                        <p>England, United Kingdom</p>
+                    </div>
+                </div>
+                <div class="mid">
                     <div class="work">
                         <form action="https://formsubmit.co/5c55b558ad364cab6976e74ff6ce06da" method="post">
+                            <div>
+                                <label for="name" style="margin-left: 5px">Name:</label> <br />
+                                <input type="text" name="name" id="name" placeholder="Billy Simon" required />
+                            </div>
                             <div>
                                 <label for="Email" style="margin-left: 5px">Email:</label> <br />
                                 <input type="email" name="Email" id="email" placeholder="someone@email.com" required />
@@ -540,13 +557,19 @@
                             </div>
                             <div>
                                 <label for="Message" style="margin-left: 5px">Message:</label> <br />
-                                <textarea name="Message" id="message" cols="100" rows="5" required>Message ........</textarea>
+                                <textarea name="Message" id="message" cols="100" rows="10" required>Message ........</textarea>
                             </div>
                             <input type="hidden" name="_captcha" value="false" />
                             <button type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
+                <!-- <div class="lt">
+                    <div class="title">
+                        <h2 style="font-family: Nunito Bold">Contact</h2>
+                    </div>
+
+                </div> -->
                 <div class="rt">
                     <div class="bt" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Home">
                         <i class="fas fa-home"></i>
@@ -566,27 +589,27 @@
                 </div>
             </div>
             <!-- ========== Base ========== -->
-            <!-- <div id="dn">
+            <div id="dn" class="container">
                 <footer>
                     <p>Template Made By Me. &copy; 2022. All Rights Reserved.</p>
                 </footer>
-            </div> -->
+            </div>
             <div id="nav_m" class="nav_m">
                 <ul>
                     <li class="mt h">
                         <i class="fas fa-home"></i>
                     </li>
-                    <li class="mt i">
-                        <i class="fas fa-info-circle"></i>
-                    </li>
-                    <li class="mt w">
-                        <i class="fas fa-laptop-house"></i>
+                    <li class="mt a">
+                        <i class="fas fa-user"></i>
                     </li>
                     <li class="mt p">
-                        <i class="fab fa-buffer"></i>
+                        <i class="fas fa-laptop-house"></i>
                     </li>
                     <li class="mt c">
-                        <i class="fas fa-comment"></i>
+                        <i class="fas fa-envelope-open"></i>
+                    </li>
+                    <li class="mt b">
+                        <i class="fas fa-blog"></i>
                     </li>
                 </ul>
             </div>

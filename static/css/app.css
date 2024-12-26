@@ -71,9 +71,10 @@ iconify-icon {
 }
 
 #ext {
+    position: relative;
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     transition: 0.2s;
 }
 
@@ -96,7 +97,7 @@ iconify-icon {
 }
 
 .hm {
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .abt,
@@ -111,8 +112,12 @@ iconify-icon {
 }
 
 #dn {
-    width: 100%;
     height: 2%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    font-size: 10px;
 }
 
 .lt {
@@ -127,6 +132,13 @@ iconify-icon {
     height: 50%;
     font-family: Nunito Regular;
     color: #303841;
+}
+
+.msgs {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
 }
 
 .rt {
@@ -299,13 +311,7 @@ button:hover {
 } */
 
 .work button {
-    padding: 10px 40px;
-    border: 1px inset #d72323;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    background-color: #d72323;
     margin: 15px 20px 0;
-    color: #ffffff;
 }
 
 .work button a {
@@ -424,21 +430,18 @@ svg {
     width: 88%;
     border: 2px inset rgba(201, 199, 199, 0.304);
     border-radius: 10px;
-    padding: 8px 10px;
+    padding: 5px;
     outline: 0;
     font-size: 15px;
 }
 
 footer {
     width: 100%;
-    text-align: center;
+    text-align: right;
 }
 
 footer > p {
-    padding: 0;
     margin: 0;
-    font-family: Nunito Regular;
-    font-size: 10px;
 }
 
 @media screen and (min-width: 370px) {
@@ -618,20 +621,27 @@ footer > p {
         align-items: center;
     }
 
-    .hm > .lt {
-        max-height: max-content;
+    .hm > .lt,
+    .cont > .lt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cont > .lt > div {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .cont > .lt > div p {
+        margin: 0 15px;
     }
 
     .mid .title {
         display: block;
         visibility: hidden;
-    }
-
-    .msgs {
-        width: 55%;
-        display: flex;
-        justify-content: space-between;
-        margin: auto;
     }
 
     #tp {
@@ -700,10 +710,10 @@ footer > p {
         justify-content: space-between;
     }
 
-    #hm,
+    /* #hm, */
     #wk,
     #pgt,
-    #cont,
+    /* #cont, */
     #abt {
         height: 80%;
     }
@@ -752,7 +762,7 @@ footer > p {
 
     .rt {
         width: 4%;
-        height: 100%;
+        /* height: 100%; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -760,11 +770,6 @@ footer > p {
 
     .rt div {
         margin: 35px auto;
-    }
-
-    footer {
-        width: 50%;
-        text-align: left;
     }
 
     footer p {
@@ -929,20 +934,13 @@ footer > p {
         /* border: 1px solid; */
     }
 
-    .cont .lt {
-        width: 100%;
-    }
-
-    /* .pgt > div:first-child > div:nth-child(2) {
-        flex-direction: row;
-    } */
-
     .pg_pic {
         height: 65%;
     }
 
     #dn {
         height: 5%;
+        font-size: 16px;
     }
 
     .pgt .work {
