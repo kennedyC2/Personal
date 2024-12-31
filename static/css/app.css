@@ -4,7 +4,6 @@ body {
     padding: 0;
     width: 100%;
     min-height: 100vh;
-    /* background-image: linear-gradient(to bottom, #d8d3d3, #ffffff); */
     position: relative;
 }
 
@@ -38,7 +37,7 @@ div::-webkit-scrollbar-track {
 }
 
 .fas {
-    font-size: 25px;
+    font-size: 1.35rem;
     color: #303841;
     cursor: pointer;
 }
@@ -70,11 +69,18 @@ iconify-icon {
     height: 100%;
 }
 
+.divider {
+    width: 25%;
+    height: 1px;
+    margin: 5.3rem auto;
+    background-color: #303841;
+}
+
 #ext {
     position: relative;
     display: flex;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     transition: 0.2s;
 }
 
@@ -85,8 +91,138 @@ iconify-icon {
     color: #303841;
 }
 
+.abt_info_rt {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.abt_info_rt > div > div:first-child p {
+    font-size: 1.56rem;
+    position: relative;
+    margin: 0;
+}
+
+.abt_info_rt > div > div:first-child p::after {
+    content: "+";
+    position: absolute;
+    top: -2px;
+    font-size: 1.56rem;
+}
+
+.abt_info_rt > div > div:last-child p {
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 40px;
+    margin: 0;
+}
+
+.abt_info_rt > div > div:last-child p:first-child::before {
+    content: "";
+    width: 1.56rem;
+    height: 1px;
+    background-color: #303841;
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+}
+
+.abt_info_rt > div {
+    border: 1px solid #303841;
+    width: 48%;
+    padding: 0.6rem.9rem;
+}
+
 .abt_info_lt span {
     font-weight: bold;
+}
+
+.edu_work > div,
+.edu_work > div ul.w_exp > li,
+.edu_work > div ul.edu > li {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.edu_work > div {
+    flex-direction: column-reverse;
+}
+
+.edu_work > div ul.w_exp > li,
+.edu_work > div ul.edu > li {
+    margin-bottom: 0.9rem;
+}
+
+.edu_work > div ul.w_exp,
+.edu_work > div ul.edu {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.edu_work > div ul.w_exp li > div:first-child,
+.edu_work > div ul.edu li > div:first-child {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    margin-top: 0.6rem;
+    position: relative;
+    border: 1px solid #303841;
+    border-radius: 50%;
+}
+
+.edu_work > div ul.w_exp li .fas,
+.edu_work > div ul.edu li .fas {
+    font-size: 1.3rem;
+}
+
+.edu_work > div ul.w_exp li > div:first-child::after,
+.edu_work > div ul.edu li > div:first-child::after {
+    content: "";
+    background-color: #303841;
+    height: 1px;
+    width: 3.8rem;
+    position: absolute;
+    bottom: -40px;
+    transform: rotate(90deg);
+}
+
+.edu_work > div ul.w_exp > li > div:last-child,
+.edu_work > div ul.edu > li > div:last-child {
+    width: 80%;
+    padding: 0.6rem 0;
+}
+
+.edu_work > div ul.w_exp > li > div:last-child p,
+.edu_work > div ul.edu > li > div:last-child p {
+    width: 35%;
+    text-align: center;
+    background-color: #303841;
+    color: #ffffff;
+    border-radius: 1.3rem;
+    padding: 0.3rem;
+    font-size: 0.6rem;
+}
+
+.edu_work > div ul.w_exp > li > div:last-child h6,
+.edu_work > div ul.edu > li > div:last-child h6 {
+    font-size: 0.8rem;
+}
+
+.edu_work > div ul.w_exp > li > div:last-child ul,
+.edu_work > div ul.edu > li > div:last-child ul {
+    padding-right: 0.5rem;
+}
+
+.edu_work > div ul.w_exp > li div:last-child ul li,
+.edu_work > div ul.edu > li div:last-child ul li {
+    font-size: 0.8rem;
+    text-align: justify;
 }
 
 .md {
@@ -117,12 +253,12 @@ iconify-icon {
     bottom: 0;
     right: 0;
     text-align: right;
-    font-size: 10px;
+    font-size: 0.6rem;
 }
 
 .lt {
     width: 100%;
-    height: 60%;
+    height: 100%;
     font-family: Nunito Regular;
     color: #303841;
 }
@@ -135,7 +271,7 @@ iconify-icon {
 }
 
 .msgs {
-    width: 55%;
+    width: 65%;
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -146,7 +282,7 @@ iconify-icon {
 }
 
 #logo {
-    margin-left: 15px;
+    margin-left: 0.9rem;
     font-family: Nunito bold;
     font-size: 1.5rem;
 }
@@ -161,8 +297,8 @@ iconify-icon {
     left: 0;
     width: 100%;
     height: auto;
-    padding: 5px 0;
-    background-color: #f6feffcf;
+    padding: 0.3rem 0;
+    background-color: #fff;
     transition: 1s;
 }
 
@@ -176,7 +312,7 @@ iconify-icon {
 }
 
 .nav_m ul li {
-    padding: 5px 0;
+    padding: 0.3rem 0;
     margin: 0;
     width: calc(100% / 5);
     text-align: center;
@@ -187,11 +323,37 @@ iconify-icon {
 .nav_m .fas,
 .nav_m .fab {
     color: #303841;
-    font-size: 25px;
+    font-size: 1.56rem;
 }
 
 .out {
-    bottom: -150px;
+    bottom: -13rem;
+}
+
+.pgt .lt {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1.3rem 0;
+    grid-template-rows: max-content;
+}
+
+.pgt .lt .card {
+    max-height: max-content;
+}
+
+.pgt .lt .card-text {
+    font-size: 0.88rem;
+}
+
+.cont > .lt > div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.cont > .lt > div p {
+    margin: 0.9rem;
 }
 
 #n1 {
@@ -201,20 +363,20 @@ iconify-icon {
 }
 
 #n1 h1 {
-    font-size: 25px;
+    font-size: 1.56rem;
 }
 
 #n1 p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 2rem;
-    margin-top: 10px;
+    margin-top: 0.6rem;
 }
 
 button {
-    padding: 6px 20px;
+    padding: 6px 1.3rem;
     border: 2px outset #303841;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    box-shadow: 0 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.25);
+    border-radius: 0.3rem;
     color: #ffffff;
     background-color: #303841;
     outline: 0;
@@ -227,12 +389,12 @@ button {
 
 .skls h2 {
     text-align: center;
-    margin: 0 auto 50px;
+    margin: 0 auto 3rem;
 }
 
 .edu_work h2 {
     text-align: center;
-    margin: 50px auto;
+    margin: 3rem auto;
 }
 
 button:hover {
@@ -246,23 +408,20 @@ button:hover {
 }
 
 #profile_pic {
-    width: 250px;
-    height: 250px;
-    margin: 35px auto;
-    /* border-width: 0 6px 0 0;
-    border-style: outset;
-    border-color: #3e3636; */
-    background-image: url(./../images/PSX_2.jpg);
+    width: 15rem;
+    height: 15rem;
+    margin: 3.3rem auto;
+    background-image: url(./../images/PSX_2.webp);
     background-position: center;
     background-size: cover;
-    /* border-radius: 50%; */
-    /* box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.25); */
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 15px 0px;
 }
 
 .lt .title,
 .mid .title {
-    margin: 0 15px;
-    padding: 5px 0;
+    margin: 0.9rem;
+    padding: 0.3rem 0;
     width: 95%;
 }
 
@@ -271,47 +430,24 @@ button:hover {
 }
 
 .title h2 {
-    margin: 25px 0 0;
+    margin: 1.56rem 0 0;
 }
 
 .title .fas {
-    font-size: 25px;
+    font-size: 1.56rem;
     /* color: #303841; */
     padding-top: 3px;
     color: #d72323aa;
-    margin-right: 10px;
+    margin-right: 0.6rem;
 }
 
-/* #univ,
-#tech,
-.skls,
-.work {
-    background-color: #ffffff;
-    border-radius: 10px;
-    margin: 15px auto;
-    padding: 15px 0 25px;
-    width: 95%;
-    transition: 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-} */
-
-/* #tech h3,
-#tech h5,
-#univ h3,
-#univ h5,
-.work h3,
-.work h5 {
-    margin: 10px 15px 12px;
-} */
-
-/* #tech:hover,
-#univ:hover {
-    box-shadow: 0 6px 6px 3px rgba(0, 0, 0, 0.25);
-    transform: translate(1px, -1px);
-} */
-
-.work button {
-    margin: 15px 20px 0;
+/* #hm, */
+#wk,
+#pgt,
+#cont,
+#abt {
+    height: 100%;
+    margin: 2rem auto 4rem;
 }
 
 .work button a {
@@ -322,16 +458,16 @@ button:hover {
 
 .work ul {
     width: 80%;
-    margin-top: 10px;
+    margin-top: 0.6rem;
 }
 
 .work ul li {
-    margin: 5px auto 10px;
+    margin: 0.3rem auto 0.6rem;
 }
 
 .lt .ed,
 .mid .ed {
-    margin: 0 20px;
+    margin: 0 1.3rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -340,34 +476,34 @@ button:hover {
 .ed .fas,
 .ed .far,
 .ed .fab {
-    font-size: 12px;
-    margin-right: 10px;
+    font-size: 0.8rem;
+    margin-right: 0.6rem;
     padding-top: 7px;
     color: #d72323;
 }
 
 .ed p {
-    margin: 5px 10px 10px;
+    margin: 0.3rem 0.6rem 0.6rem;
 }
 
 .skls > div {
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10%;
-    gap: 80px calc(50% / 4);
+    grid-template-columns: 25% 25% 25%;
+    gap: 1.3rem calc(25% / 2);
 }
 
 .skls .icon_cont {
-    height: 100px;
+    height: 95px;
     margin: 0;
-    padding: 20px 5px;
+    padding: 1.3rem 0.3rem;
     /* border: 1px solid #303841; */
-    border-radius: 20px;
+    border-radius: 1.3rem;
 }
 
 .skls .icon_cont p {
-    font-size: 15px;
+    font-size: 0.9rem;
     text-align: center;
-    margin: 10px 0;
+    margin: 0.6rem 0;
 }
 
 .brand {
@@ -380,7 +516,7 @@ button:hover {
 
 svg {
     margin: auto;
-    padding: 14px 14px;
+    padding: 0.88rem 0.88rem;
 }
 
 .pgt .lt {
@@ -420,19 +556,19 @@ svg {
 }
 
 .cont form > div {
-    margin-left: 20px;
-    padding: 10px 0;
+    /* margin-left: 1.3rem; */
+    padding: 0.6rem 0;
 }
 
 .cont input,
 .cont textarea {
-    margin-top: 5px;
-    width: 88%;
+    margin-top: 0.3rem;
+    width: 100%;
     border: 2px inset rgba(201, 199, 199, 0.304);
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 0.6rem;
+    padding: 0.3rem;
     outline: 0;
-    font-size: 15px;
+    font-size: 0.9rem;
 }
 
 footer {
@@ -444,7 +580,8 @@ footer > p {
     margin: 0;
 }
 
-@media screen and (min-width: 370px) {
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
     .lt {
         width: 100%;
         /* height: 50vh; */
@@ -461,93 +598,15 @@ footer > p {
     }
 }
 
-@media screen and (min-width: 390px) {
-    #profile_pic {
-        width: 250px;
-        height: 250px;
-    }
-}
-
-@media screen and (max-width: 300px) {
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
     .lt {
         width: 100%;
-        height: auto;
-    }
-
-    .mid {
-        width: 100%;
-        height: auto;
-    }
-
-    #profile_pic {
-        width: 200px;
-        height: 200px;
-    }
-
-    #n1 h1 {
-        font-size: 20px;
-    }
-
-    #n1 p {
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 414px) {
-    .lt {
-        width: 100%;
-        /* height: 53vh; */
-    }
-
-    .mid {
-        width: 100%;
-        height: unset;
-    }
-
-    #profile_pic {
-        width: 280px;
-        height: 280px;
-    }
-}
-
-@media screen and (min-width: 520px) {
-    .lt {
-        width: 100%;
-        height: auto;
-    }
-
-    .mid {
-        width: 100%;
-        height: auto;
-    }
-
-    #profile_pic {
-        width: 250px;
-        height: 250px;
-    }
-
-    .wk .work,
-    .pgt .work {
-        width: 95%;
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 720px) {
-    .lt {
-        width: 80%;
-        height: 50vh;
         margin: auto;
     }
 
-    .mid {
-        width: 100%;
-        height: 30vh;
-    }
-
-    #profile_pic {
-        width: 300px;
-        height: 300px;
+    .hm .lt {
+        width: 70%;
     }
 
     #n1 h1 {
@@ -555,19 +614,15 @@ footer > p {
     }
 
     #n1 p {
-        font-size: 20px;
+        font-size: 1.3rem;
     }
 
     .pgt .work {
         height: auto;
     }
-}
 
-@media screen and (min-width: 760px) {
-    .lt {
-        width: 100%;
-        height: auto;
-        margin: auto;
+    .msgs {
+        width: 45%;
     }
 
     .mid {
@@ -575,46 +630,44 @@ footer > p {
         height: auto;
     }
 
-    /* #univ,
-    #tech,
-    .skls,
-    .work {
-        margin: 15px;
-    } */
-
-    /* .pgt > div:first-child > div:nth-child(2) {
-        flex-direction: row;
-    } */
-}
-
-@media screen and (min-width: 800px) {
-    .lt {
-        width: 100%;
-        margin: auto;
-    }
-
-    .mid {
-        width: 100%;
-    }
-
     #profile_pic {
-        width: 350px;
-        height: 350px;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .edu_work > div ul.w_exp > li > div:last-child,
+    .edu_work > div ul.edu > li > div:last-child {
+        width: 90%;
+    }
+
+    .skls > div {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        gap: 1.3rem calc(20% / 3);
+    }
+
+    .pgt .lt {
+        display: grid;
+        grid-template-columns: 48.5% 48.5%;
+        gap: 1.3rem 3%;
+        grid-template-rows: max-content;
+    }
+
+    .edu_work > div ul.w_exp > li > div:last-child p,
+    .edu_work > div ul.edu > li > div:last-child p {
+        width: 15%;
     }
 }
 
-@media screen and (min-width: 900px) {
-    #profile_pic {
-        width: 400px;
-        height: 400px;
-    }
-}
-
-@media screen and (min-width: 1000px) {
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
     html,
     body {
         height: 100vh;
-        /* background-image: linear-gradient(to right, #d8d3d3, #ffffff); */
+    }
+
+    #ext {
+        height: 100vh;
     }
 
     .hm {
@@ -628,16 +681,9 @@ footer > p {
         justify-content: center;
     }
 
-    .cont > .lt > div {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-bottom: 25px;
-    }
-
-    .cont > .lt > div p {
-        margin: 0 15px;
-    }
+    /* .cont > .lt > div {
+        margin-bottom: .5rem;
+    } */
 
     .mid .title {
         display: block;
@@ -649,13 +695,6 @@ footer > p {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    .divider {
-        width: 25%;
-        height: 1px;
-        margin: 55px auto;
-        background-color: #303841;
     }
 
     #nav {
@@ -678,7 +717,7 @@ footer > p {
     }
 
     #nav ul li {
-        margin: 0 20px;
+        margin: 0 1.3rem;
         padding: 2px;
         float: left;
         cursor: pointer;
@@ -690,16 +729,16 @@ footer > p {
     }
 
     .info {
-        padding: 20px 0;
+        padding: 1.3rem 0;
     }
 
     .abt .skls {
         padding: 0 0 40px;
     }
 
-    .skls .icon_cont {
+    .skls > div {
         grid-template-columns: 10% 10% 10% 10% 10%;
-        gap: 40px calc(50% / 4);
+        gap: 4.5rem calc(50% / 4);
         grid-template-rows: max-content;
     }
 
@@ -710,32 +749,51 @@ footer > p {
         justify-content: space-between;
     }
 
-    /* #hm, */
     #wk,
     #pgt,
-    /* #cont, */
     #abt {
         height: 80%;
+        margin: auto;
+        margin: 3rem auto;
     }
 
+    #cont {
+        height: unset;
+        margin: auto;
+    }
+
+    .hm .lt,
     .lt {
         width: 30%;
         height: 100%;
         margin: unset;
     }
 
+    .hm .lt > h2,
+    #n1 h1 {
+        font-size: 25px;
+    }
+
+    .hm .lt > h4 {
+        font-size: 20px;
+    }
+
+    .hm .lt > p {
+        font-size: 1rem !important;
+    }
+
+    .msgs {
+        width: 65%;
+    }
+
     #n1 {
         width: 90%;
-        margin: 13% 0 0 20px;
+        margin: 13% 0 0 1.3rem;
         text-align: unset;
     }
 
-    #n1 h1 {
-        font-size: 30px;
-    }
-
     #n1 p {
-        font-size: 18px;
+        font-size: 0.9rem;
         text-align: justify;
     }
 
@@ -754,29 +812,33 @@ footer > p {
         width: calc(100% / 3);
     }
 
+    .abt_info_rt > div > div:first-child p::after {
+        font-size: 1rem;
+        top: -5px;
+    }
+
     #profile_pic {
-        width: 300px;
-        height: 300px;
-        margin: 70px auto 20px;
+        width: 15rem;
+        height: 15rem;
+        margin: 1.3rem auto;
     }
 
     .rt {
         width: 4%;
-        /* height: 100%; */
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
     .rt div {
-        margin: 35px auto;
+        margin: 1.5rem auto;
     }
 
     footer p {
         padding: 0;
-        margin: 10px 0 0;
+        margin: 0.6rem 0 0;
         font-family: Nunito Regular;
-        font-size: 10px;
+        font-size: 0.6rem;
     }
 
     .abt .lt .info,
@@ -788,52 +850,26 @@ footer > p {
     }
 
     .abt_info_lt {
-        width: 65%;
-        padding: 5px;
+        width: 75%;
+        padding: 0.3rem;
     }
 
     .abt_info_rt {
-        width: 30%;
-        display: flex;
+        width: 25%;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
     }
 
     .abt_info_rt > div > div:first-child p {
-        font-size: 30px;
-        position: relative;
-        margin: 0;
-    }
-
-    .abt_info_rt > div > div:first-child p::after {
-        content: "+";
-        position: absolute;
-        top: -2px;
-        font-size: 25px;
+        font-size: 1rem;
     }
 
     .abt_info_rt > div > div:last-child p {
-        font-size: 18px;
-        position: relative;
-        padding-left: 40px;
-        margin: 0;
-    }
-
-    .abt_info_rt > div > div:last-child p:first-child::before {
-        content: "";
-        width: 25px;
-        height: 1px;
-        background-color: #303841;
-        position: absolute;
-        top: 12px;
-        left: 0;
+        font-size: 0.8rem;
     }
 
     .abt_info_rt > div {
-        border: 1px solid #303841;
         width: 80%;
-        padding: 15px 25px;
+        padding: 0.9rem 1.56rem;
     }
 
     .edu_work > div,
@@ -842,74 +878,46 @@ footer > p {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        /* border: 1px solid; */
+    }
+
+    .edu_work > div {
+        flex-direction: row;
     }
 
     .edu_work > div ul.w_exp > li,
     .edu_work > div ul.edu > li {
-        margin-bottom: 15px;
+        margin-bottom: 0.9rem;
     }
 
     .edu_work > div ul.w_exp,
     .edu_work > div ul.edu {
         width: 43%;
-        list-style: none;
-        padding: 0;
-        margin: 0;
     }
 
     .edu_work > div ul.w_exp li > div:first-child,
     .edu_work > div ul.edu li > div:first-child {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        margin-top: 10px;
-        position: relative;
-        border: 1px solid #303841;
-        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
     }
 
     .edu_work > div ul.w_exp li .fas,
     .edu_work > div ul.edu li .fas {
-        font-size: 20px;
-    }
-
-    .edu_work > div ul.w_exp li > div:first-child::after,
-    .edu_work > div ul.edu li > div:first-child::after {
-        content: "";
-        background-color: #303841;
-        height: 1px;
-        width: 60px;
-        position: absolute;
-        bottom: -40px;
-        transform: rotate(90deg);
+        font-size: 1.3rem;
     }
 
     .edu_work > div ul.w_exp > li > div:last-child,
     .edu_work > div ul.edu > li > div:last-child {
-        width: 85%;
-        padding: 10px 0;
-        /* border: 1px solid; */
+        width: 82%;
     }
 
     .edu_work > div ul.w_exp > li > div:last-child p,
     .edu_work > div ul.edu > li > div:last-child p {
-        width: 25%;
-        text-align: center;
-        background-color: #303841;
-        color: #ffffff;
-        border-radius: 20px;
-        padding: 5px;
-        font-size: 12px;
+        width: 30%;
     }
 
-    .edu_work > div ul.w_exp > li div:last-child ul li,
-    .edu_work > div ul.edu > li div:last-child ul li {
-        font-size: 13px;
-        text-align: justify;
+    .edu_work > div ul.w_exp > li > div:last-child ul,
+    .edu_work > div ul.edu > li > div:last-child ul {
+        padding-right: 0;
     }
 
     .wk .work,
@@ -923,7 +931,7 @@ footer > p {
 
     .lt .title,
     .mid .title {
-        margin: 0 20px;
+        margin: 0 1.3rem;
         width: 100%;
     }
 
@@ -931,7 +939,6 @@ footer > p {
     .pgt .lt {
         width: 90%;
         overflow-y: scroll;
-        /* border: 1px solid; */
     }
 
     .pg_pic {
@@ -940,30 +947,29 @@ footer > p {
 
     #dn {
         height: 5%;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .pgt .work {
-        min-height: 250px;
+        min-height: 23rem;
     }
 
     .pgt .lt {
-        display: grid;
-        grid-template-columns: 24% 24% 24% 24%;
-        gap: 20px calc(4% / 3);
-        grid-template-rows: max-content;
+        grid-template-columns: 32% 32% 32%;
+        gap: 1.3rem calc(4% / 2);
     }
 
-    .pgt .lt .card {
-        max-height: max-content;
-    }
-
-    .pgt .lt .card-text {
-        font-size: 14px;
+    .cont .lt h1 {
+        font-size: 1.56rem;
     }
 }
 
-@media screen and (min-width: 1200px) {
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .fas {
+        font-size: 1.5rem;
+    }
+
     .lt .title,
     .mid .title {
         margin: 0;
@@ -971,13 +977,25 @@ footer > p {
     }
 
     #profile_pic {
-        margin: 15px auto 30px;
+        margin: 0.9rem auto 2rem;
     }
 
     #logo {
         font-size: 2.3rem;
         font-weight: 600;
         margin: auto 0;
+    }
+
+    .skls .icon_cont {
+        height: 100px;
+    }
+
+    .msgs {
+        width: 45%;
+    }
+
+    .hm .lt {
+        width: 35%;
     }
 
     #profile_pic {
@@ -988,13 +1006,75 @@ footer > p {
     #n1 {
         margin: 0;
         text-align: unset;
-        /* font-family: Nunito italic; */
     }
 
     .wk .work,
     .pgt .work {
         width: 95%;
     }
+
+    .rt div {
+        margin: 2.3rem auto;
+    }
+
+    #n1 h1 {
+        font-size: 2rem;
+    }
+
+    #n1 p {
+        font-size: 1.15rem;
+        text-align: justify;
+    }
+
+    .abt_info_lt {
+        width: 65%;
+    }
+
+    .abt_info_rt {
+        width: 30%;
+    }
+
+    .abt_info_rt > div > div:first-child p {
+        font-size: 1.5rem;
+    }
+
+    .abt_info_rt > div > div:last-child p {
+        font-size: 1rem;
+    }
+
+    .edu_work > div ul.w_exp > li > div:last-child h6,
+    .edu_work > div ul.edu > li > div:last-child h6 {
+        font-size: 1rem;
+    }
+
+    .edu_work > div ul.w_exp > li > div:last-child,
+    .edu_work > div ul.edu > li > div:last-child {
+        width: 85%;
+    }
+
+    .edu_work > div ul.w_exp > li > div:last-child p,
+    .edu_work > div ul.edu > li > div:last-child p {
+        width: 25%;
+    }
+
+    .abt_info_rt > div > div:first-child p::after {
+        top: -6px;
+        font-size: 1.56rem;
+    }
+
+    .pgt .lt {
+        grid-template-columns: 24% 24% 24% 24%;
+        gap: 1.3rem calc(4% / 3);
+    }
+
+    .cont .lt h1 {
+        font-size: 2rem;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    /*  */
 }
 
 .closed {

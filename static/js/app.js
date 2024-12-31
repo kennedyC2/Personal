@@ -14,8 +14,6 @@ const Swap_d = () => {
                 }
             }
 
-            console.log(nav)
-
             switch (nav.dataset.bsTitle) {
                 case "Home":
                     pgs[0].classList.remove("closed");
@@ -56,61 +54,45 @@ const Swap_m = () => {
             switch (nav.classList[1]) {
                 case "h":
                     pgs[0].classList.remove("closed");
-                    nav_m.classList.remove("out");
                     break;
 
                 case "a":
                     pgs[1].classList.remove("closed");
-                    pgs[1].style.height = "auto"
                     break;
 
                 case "p":
                     pgs[2].classList.remove("closed");
-                    pgs[2].style.height = "auto"
                     break;
 
                 case "c":
                     pgs[3].classList.remove("closed");
-                    pgs[3].style.height = "auto"
                     break;
 
                 case "b":
                     pgs[4].classList.remove("closed");
-                    pgs[4].style.height = "auto"
                     break;
 
                 default:
                     break;
             }
-            setTimeout(() => {
-                nav_m.classList.add("out");
-            }, 1000);
         });
     });
 };
 
 // Space
 const space = () => {
-    let position = 0
-    window.addEventListener("touchstart", () => {
-        if (nav_m.classList.contains("out")) {
-            nav_m.classList.remove("out");
-        }
-    });
-
-    window.addEventListener("scroll", () => {
-        console.log("hello")
-        if (window.scrollY - position > 0) {
+    window.addEventListener("scroll", (e) => {
+        if (e.type === "scroll") {
             if (!nav_m.classList.contains("out")) {
                 nav_m.classList.add("out");
             }
-            position = window.scrollY
-        } else {
+        }
+
+        setTimeout(() => {
             if (nav_m.classList.contains("out")) {
                 nav_m.classList.remove("out");
             }
-            position = window.scrollY
-        }
+        }, 1000);
     });
 };
 
