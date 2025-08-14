@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 100vh;
     position: relative;
 }
 
@@ -32,35 +31,25 @@ div::-webkit-scrollbar-track {
 
 .fab {
     font-size: 32px;
-    color: #303841;
+    color: #303841 !important;
     cursor: pointer;
 }
 
 .fas {
     font-size: 1.35rem;
-    color: #303841;
+    color: #303841 !important;
     cursor: pointer;
 }
 
 @font-face {
-    font-family: Nunito Regular;
-    src: url(./../Nunito/static/Nunito-Regular.ttf);
+    font-family: MoxillaText Regular;
+    src: url(./../Mozilla_Text/static/MozillaText-Regular.ttf);
 }
 
 @font-face {
-    font-family: Nunito Medium;
-    src: url(./../Nunito/static/Nunito-Medium.ttf);
-}
-
-@font-face {
-    font-family: Nunito Bold;
-    src: url(./../Nunito/static/Nunito-Bold.ttf);
+    font-family: MoxillaText Bold;
+    src: url(./../Mozilla_Text/static/MozillaText-Bold.ttf);
     font-weight: bold;
-}
-
-@font-face {
-    font-family: Nunito italic;
-    src: url(./../Nunito/static/Nunito-Italic.ttf);
 }
 
 iconify-icon {
@@ -73,22 +62,26 @@ iconify-icon {
     width: 25%;
     height: 1px;
     margin: 5.3rem auto;
-    background-color: #303841;
+    background-color: #303841 !important;
 }
 
 #ext {
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 88vh;
     transition: 0.2s;
+}
+
+.popover-header {
+    background-color: red !important;
 }
 
 #tp {
     width: 100%;
     height: 10%;
     padding: 5% 0;
-    color: #303841;
+    color: #303841 !important;
 }
 
 .abt_info_rt {
@@ -121,14 +114,14 @@ iconify-icon {
     content: "";
     width: 1.56rem;
     height: 1px;
-    background-color: #303841;
+    background-color: #303841 !important;
     position: absolute;
     top: 0.8rem;
     left: 0;
 }
 
 .abt_info_rt > div {
-    border: 1px solid #303841;
+    border: 1px solid #303841 !important;
     width: 48%;
     padding: 0.6rem.9rem;
 }
@@ -172,7 +165,7 @@ iconify-icon {
     padding: 0.6rem;
     margin-top: 0.6rem;
     position: relative;
-    border: 1px solid #303841;
+    border: 1px solid #303841 !important;
     border-radius: 50%;
 }
 
@@ -184,7 +177,7 @@ iconify-icon {
 .edu_work > div ul.w_exp li > div:first-child::after,
 .edu_work > div ul.edu li > div:first-child::after {
     content: "";
-    background-color: #303841;
+    background-color: #303841 !important;
     height: 1px;
     width: 3.8rem;
     position: absolute;
@@ -202,7 +195,7 @@ iconify-icon {
 .edu_work > div ul.edu > li > div:last-child p {
     width: 35%;
     text-align: center;
-    background-color: #303841;
+    background-color: #303841 !important;
     color: #ffffff;
     border-radius: 1.3rem;
     padding: 0.3rem;
@@ -237,14 +230,9 @@ iconify-icon {
 }
 
 .abt,
-.wk,
 .pgt,
 .cont {
     flex-direction: column;
-}
-
-.wk .mid > div:first-child {
-    display: none;
 }
 
 #dn {
@@ -259,15 +247,15 @@ iconify-icon {
 .lt {
     width: 100%;
     height: 100%;
-    font-family: Nunito Regular;
-    color: #303841;
+    font-family: MoxillaText Regular;
+    color: #303841 !important;
 }
 
 .mid {
     width: 100%;
     height: 50%;
-    font-family: Nunito Regular;
-    color: #303841;
+    font-family: MoxillaText Regular;
+    color: #303841 !important;
 }
 
 .msgs {
@@ -283,7 +271,7 @@ iconify-icon {
 
 #logo {
     margin-left: 0.9rem;
-    font-family: Nunito bold;
+    font-family: MoxillaText bold;
     font-size: 1.5rem;
 }
 
@@ -322,7 +310,7 @@ iconify-icon {
 
 .nav_m .fas,
 .nav_m .fab {
-    color: #303841;
+    color: #303841 !important;
     font-size: 1.56rem;
 }
 
@@ -372,19 +360,19 @@ iconify-icon {
     margin-top: 0.6rem;
 }
 
-button {
+.btn {
     padding: 6px 1.3rem;
-    border: 2px outset #303841;
+    border: 2px outset #303841 !important;
     box-shadow: 0 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.25);
     border-radius: 0.3rem;
     color: #ffffff;
-    background-color: #303841;
+    background-color: #303841 !important;
     outline: 0;
-    font-family: Nunito Bold;
+    font-family: MoxillaText Bold;
 }
 
 .pgt .lt .card-body a {
-    color: #303841;
+    color: #303841 !important;
 }
 
 .skls h2 {
@@ -397,7 +385,7 @@ button {
     margin: 3rem auto;
 }
 
-button:hover {
+.btn:hover {
     background-color: #000;
     color: #ffffff;
 }
@@ -435,7 +423,7 @@ button:hover {
 
 .title .fas {
     font-size: 1.56rem;
-    /* color: #303841; */
+    /* color: #303841 !important; */
     padding-top: 3px;
     color: #d72323aa;
     margin-right: 0.6rem;
@@ -447,13 +435,13 @@ button:hover {
 #cont,
 #abt {
     height: 100%;
-    margin: 2rem auto 4rem;
+    margin: 3rem auto 4rem;
 }
 
 .work button a {
     text-decoration: none;
     color: #ffffff;
-    font-family: Nunito Bold;
+    font-family: MoxillaText Bold;
 }
 
 .work ul {
@@ -496,7 +484,7 @@ button:hover {
     height: 95px;
     margin: 0;
     padding: 1.3rem 0.3rem;
-    /* border: 1px solid #303841; */
+    /* border: 1px solid #303841 !important; */
     border-radius: 1.3rem;
 }
 
@@ -514,12 +502,8 @@ button:hover {
     transition: 0.1s;
 }
 
-svg {
-    margin: auto;
-    padding: 0.88rem 0.88rem;
-}
-
-.pgt .lt {
+.pgt .lt,
+.blg .lt {
     width: 100%;
     height: 100%;
 }
@@ -600,9 +584,14 @@ footer > p {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    #ext {
+        height: auto;
+    }
+
     .lt {
         width: 100%;
         margin: auto;
+        height: auto;
     }
 
     .hm .lt {
@@ -615,10 +604,6 @@ footer > p {
 
     #n1 p {
         font-size: 1.3rem;
-    }
-
-    .pgt .work {
-        height: auto;
     }
 
     .msgs {
@@ -661,15 +646,6 @@ footer > p {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    html,
-    body {
-        height: 100vh;
-    }
-
-    #ext {
-        height: 100vh;
-    }
-
     .hm {
         align-items: center;
     }
@@ -680,10 +656,6 @@ footer > p {
         flex-direction: column;
         justify-content: center;
     }
-
-    /* .cont > .lt > div {
-        margin-bottom: .5rem;
-    } */
 
     .mid .title {
         display: block;
@@ -700,7 +672,7 @@ footer > p {
     #nav {
         display: block;
         margin: auto 0;
-        color: #303841;
+        color: #303841 !important;
     }
 
     .nav_m {
@@ -743,10 +715,7 @@ footer > p {
     }
 
     .md {
-        width: 100%;
-        display: flex;
         flex-direction: row;
-        justify-content: space-between;
     }
 
     #wk,
@@ -805,13 +774,6 @@ footer > p {
         justify-content: center;
     }
 
-    .wk .lt,
-    .pgt .lt,
-    .pgt .mid,
-    .wk .mid {
-        width: calc(100% / 3);
-    }
-
     .abt_info_rt > div > div:first-child p::after {
         font-size: 1rem;
         top: -5px;
@@ -837,7 +799,7 @@ footer > p {
     footer p {
         padding: 0;
         margin: 0.6rem 0 0;
-        font-family: Nunito Regular;
+        font-family: MoxillaText Regular;
         font-size: 0.6rem;
     }
 
@@ -920,15 +882,6 @@ footer > p {
         padding-right: 0;
     }
 
-    .wk .work,
-    .pgt .work {
-        width: 90%;
-    }
-
-    .wk .mid > div:first-child {
-        display: block;
-    }
-
     .lt .title,
     .mid .title {
         margin: 0 1.3rem;
@@ -936,7 +889,8 @@ footer > p {
     }
 
     .abt .lt,
-    .pgt .lt {
+    .pgt .lt,
+    .blg .lt {
         width: 90%;
         overflow-y: scroll;
     }
@@ -948,10 +902,6 @@ footer > p {
     #dn {
         height: 5%;
         font-size: 1rem;
-    }
-
-    .pgt .work {
-        min-height: 23rem;
     }
 
     .pgt .lt {
@@ -1006,11 +956,6 @@ footer > p {
     #n1 {
         margin: 0;
         text-align: unset;
-    }
-
-    .wk .work,
-    .pgt .work {
-        width: 95%;
     }
 
     .rt div {
